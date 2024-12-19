@@ -1,0 +1,73 @@
+---
+title: "My Reproducible Manuscript"
+author: "Su Li"
+format: html
+pdf: default
+bibliography: references.bib
+---
+---
+title: "My Reproducible Manuscript"
+author: "Su Li"
+format: 
+  html: default
+  docx: default
+bibliography: references.bib
+---
+
+```{r}
+# Load penguins
+library(ggplot2)
+library(readr)
+```
+# Results
+```{r}
+penguins <- read.csv("../data/data.csv")
+```
+
+
+```{r}
+# Plot penguins
+ggplot(penguins, 
+       aes(x = `Flipper.Length..mm.`, y = `Culmen.Length..mm.`)) +
+        geom_point(aes(color = Species, shape = Species)) +
+        scale_color_manual(values = c("darkorange","purple","cyan4")) +
+        labs(
+                title = "Flipper and Culmen length",
+                subtitle = "Dimensions for penguins at Palmer Station LTER",
+                x = "Flipper length (mm)", y = "Culmen length (mm)",
+                color = "Penguin species", shape = "Penguin species"
+        ) +
+        theme_minimal()
+
+```
+
+# Inline Code
+There are `r sum(penguins$Species=='Adelie')` penguins of the Adelie species in the dataset.
+1. Simple calculation: `r 25 +25`.  
+2. There are `r sum(penguins$species == "Gentoo")` penguins of the Gentoo species in the dataset, and `r sum(penguins$species == "Chinstrap")` of Chinstrap.  
+3. There are `r length(unique(penguins$species))` unique penguin species.  
+
+# Sourcing Code
+```{r}
+source("../scripts/do_addition.R")
+do_addition(2,2)
+```
+
+# Meet Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. 
+To learn more about Quarto see [https://quarto.org](https://quarto.org/).
+
+# Meet the penguins
+
+The `penguins` data from the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) package [@m.horstPalmerArchipelagoPenguins2022] contains size measurements for `r nrow(penguins)` penguins from three species observed on three islands in the Palmer Archipelago, Antarctica. According to @kuhnModeldataDataSets2019, this method is useful.
+
+
+The plot below shows the relationship between flipper and bill lengths of these penguins.
+![penguins](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png)
+```{r}
+library(quarto)
+quarto_render("my-reproducible-manuscript.qmd", output_format = "docx")
+```
+
+
