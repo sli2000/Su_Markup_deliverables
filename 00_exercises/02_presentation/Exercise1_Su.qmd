@@ -1,0 +1,53 @@
+---
+title: "Exercise1_week2"
+author: 
+  - name: Su Li
+    orcid: 0009-0006-0173-4630
+    email: s.li4@uu.nl
+date: 25 Sep 2024
+date-format: "D MMM YYYY"
+execute: 
+  echo: true
+editor: source
+format: 
+  revealjs:
+    embed-resources: true
+    theme: simple
+    progress: true
+    multiplex: true
+    transition: fade
+    slide-number: true
+    margin: 0.075
+    logo: "uu_logo.jpg" 
+    toc: false
+    toc-depth: 1
+    toc-title: Outline
+    scrollable: true
+    reference-location: margin
+---
+## My Favourite Equation
+
+This is the formula for calculating the interest on a loan or investment:
+
+$$ A = P \left(1 + \frac{r}{n}\right)^{nt} $$
+
+Where:\
+- **A**: Final amount \
+- **P**: Initial principal \
+- **r**: Annual interest rate\
+- **n**: Number of times interest is applied per year\
+- **t**:Time in years
+
+## My Winter Sports Plan
+
+I have two exciting plans to help me get through the Dutch winter:
+
+1.**Visiting all Fun Forest locations**\
+- Four Locations:Amsterdam, Rotterdam, Almere, Venlo\
+- I have already checked off Amsterdam!\
+- [Fun Forest Link](https:www.funforest.nl/)
+
+2.**Learning Archery**\
+- I missed the first round, but I'm waiting for the second one! \
+- [USC Archery Course](https://www.uscsport.nl/en/sports/boogschieten/)
+
