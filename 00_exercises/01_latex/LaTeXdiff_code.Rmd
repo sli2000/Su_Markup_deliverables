@@ -1,0 +1,24 @@
+---
+title: "Untitled"
+author: "Su Li"
+date: "2024-09-15"
+output: html_document
+---
+
+```{r}
+original_file <- "original.tex"
+modified_file <- "modified.tex"
+output_file <- "diff.tex"
+```
+```{r}
+cmd <- paste("latexdiff", original_file, modified_file)
+```
+
+
+```{r}
+diff_output <- system(cmd, intern = TRUE)
+```
+```{r}
+writeLines(diff_output, output_file)
+```
+
