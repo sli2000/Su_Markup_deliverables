@@ -1,0 +1,10 @@
+name: visualize_results
+title:
+username: sli2000
+account: sli2000
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13717279
+bundleId: 9648064
+url: https://sli2000.shinyapps.io/visualize_results/
+version: 1
