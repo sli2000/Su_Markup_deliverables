@@ -1,6 +1,6 @@
 # Markup languages and reproducible programming in statistics
 
-The objective of this manuscript is to reproduce the simulation study presented in Boulesteix, Groenwold, Abrahamowicz, et al. (2020). The original paper conducted a small-scale simulation study to examine the impact of measurement error on a (continuous) exposure and/or a (continuous) confounding variable.
+The objective of this manuscript is to reproduce the simulation study presented in Boulesteix, Groenwold, Abrahamowicz, et al. (2020). 
 
 The required components for reproducing the results are organized as follows:
 
